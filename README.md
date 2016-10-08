@@ -20,7 +20,7 @@ Add **release** field to your **package.json** as described at [plugins document
 }
 ```
 
-The last thing you need to do is to create the first git tag manually and push it:
+Create the first git tag manually and push it:
 ```sh
 git tag v0.0.0
 git push --tags

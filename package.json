@@ -4,7 +4,7 @@
   "description": "semantic-release plugin: get latest release version based on git tags",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
+    "test": "eslint src.js",
     "prepublish": "babel src.js --out-file index.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },

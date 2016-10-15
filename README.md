@@ -2,7 +2,7 @@
 
 This is [getLastRelease](https://github.com/semantic-release/semantic-release#getlastrelease) plugin for [semantic-release](https://github.com/semantic-release/semantic-release). It's made for projects which must not be published at NPM.
 
-By default **semantic-release** extracts latest version via from NPM registry but **last-release-git** extracts it from git tags.
+By default **semantic-release** extracts latest version from NPM registry but **last-release-git** extracts it from git tags.
 
 ## Getting started
 

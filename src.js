@@ -2,6 +2,7 @@ const { execSync } = require('child_process');
 const { clean, lt } = require('semver');
 
 module.exports = (config, pluginConfig, callback) => {
+    execSync('git pull');
     const refs = execSync('git show-ref --tags').toString('utf-8').trim().split('\n');
     let latestVersion;
     let latestVersionCommitHash;

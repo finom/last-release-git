@@ -6,7 +6,8 @@ module.exports = (config, pluginConfig, callback) => {
     let latestVersion;
     let latestVersionCommitHash;
 
-    for (const ref of refs) {
+    for (let i = 0; i < refs.length; i++) {
+        const ref = refs[i];
         const [commitHash, refName] = ref.split(' ');
         const version = clean(refName.split('/')[2]);
 

@@ -20,9 +20,10 @@ Add **release** field to your **package.json** as described at [plugins document
 }
 ```
 
-Make sure your travis build fetches your git tags before running `semantic-release`. If you have no special `git` commands in your `.travis.yml` file, add `git fetch --tags` to your `after_success` section like this:
+Make sure your travis build fetches your git tags before running `semantic-release`. If you have no special `git` commands in your `.travis.yml` file, make sure to fetch all tags in your `after_success` section like this:
 ```yaml
 after_success:
+  - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
   - git fetch --tags
   - npm run semantic-release
 ```
